@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function peapod_slider_field_default_fields() {
   $fields = array();
@@ -221,6 +221,7 @@ function peapod_slider_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => 'slider-photos',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',

@@ -5,17 +5,24 @@
  */
 
 /**
- * Implementation of hook_views_api().
+ * Implements hook_ctools_plugin_api().
  */
-function peapod_slider_views_api() {
+function peapod_slider_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => 3.0);
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
   }
 }
 
 /**
- * Implementation of hook_image_default_styles().
+ * Implements hook_views_api().
+ */
+function peapod_slider_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
+ * Implements hook_image_default_styles().
  */
 function peapod_slider_image_default_styles() {
   $styles = array();
@@ -70,7 +77,7 @@ function peapod_slider_image_default_styles() {
 }
 
 /**
- * Implementation of hook_node_info().
+ * Implements hook_node_info().
  */
 function peapod_slider_node_info() {
   $items = array(
